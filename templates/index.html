@@ -1,0 +1,1020 @@
+<!DOCTYPE html>
+<html lang="es" x-data="{ 
+  currentLang: 'es',
+  content: {
+    es: {
+      title: 'StarkMind - Automatización Inteligente y Análisis de Datos para Empresas Modernas',
+      description: 'Firma tecnológica especializada en automatización inteligente, scraping web de alto rendimiento y extracción de datos impulsada por IA. Reducimos costos operativos y convertimos datos en decisiones estratégicas.',
+      tagline: 'Firma Tecnológica Especializada',
+      heroTitle: 'Automatización Inteligente',
+      heroSubtitle: 'y Análisis de Datos',
+      heroDescription: 'Firma tecnológica con sede en <strong>Panamá</strong>, especializada en <strong>automatización inteligente</strong>, <strong>scraping web de alto rendimiento</strong> y <strong>extracción de datos impulsada por IA</strong>. Ayudamos a empresas a reducir costos operativos y convertir datos crudos en decisiones estratégicas.',
+      ctaPrimary: 'Consultoría Gratuita',
+      ctaSecondary: 'Ver Soluciones',
+      navServices: 'Servicios',
+      navTechnology: 'Tecnología',
+      navCompany: 'Empresa',
+      navContact: 'Consultoría'
+    },
+    en: {
+      title: 'StarkMind - Smart Automation & Data Intelligence for the Modern Business',
+      description: 'Boutique technology firm specialized in intelligent automation, high-performance web scraping, and AI-driven data extraction. We help businesses reduce operational costs and transform raw data into strategic insights.',
+      tagline: 'Specialized Technology Firm',
+      heroTitle: 'Smart Automation',
+      heroSubtitle: '& Data Intelligence',
+      heroDescription: 'Boutique technology firm based in <strong>Panama</strong>, specialized in <strong>intelligent automation</strong>, <strong>high-performance web scraping</strong>, and <strong>AI-driven data extraction</strong>. We help businesses reduce operational costs and transform raw data into strategic insights.',
+      ctaPrimary: 'Free Consultation',
+      ctaSecondary: 'View Solutions',
+      navServices: 'Services',
+      navTechnology: 'Technology', 
+      navCompany: 'Company',
+      navContact: 'Consultation'
+    }
+  },
+  toggleLanguage() {
+    this.currentLang = this.currentLang === 'es' ? 'en' : 'es';
+    document.documentElement.lang = this.currentLang;
+    document.title = this.content[this.currentLang].title;
+    document.querySelector('meta[name=description]').content = this.content[this.currentLang].description;
+  }
+}">
+<head>
+  <meta charset="UTF-8" />
+  
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BRWYK4NE9Y"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-BRWYK4NE9Y');
+  </script>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>StarkMind - Automatización Inteligente y Análisis de Datos para Empresas Modernas</title>
+  <meta name="description" content="Firma tecnológica especializada en automatización inteligente, scraping web de alto rendimiento y extracción de datos impulsada por IA. Reducimos costos operativos y convertimos datos en decisiones estratégicas." />
+  <meta name="keywords" content="automatización inteligente, inteligencia artificial, scraping web, dashboards de datos, soluciones tecnológicas, API Python FastAPI Django, desarrollo web empresarial, extracción de datos" />
+  <meta name="author" content="StarkMind" />
+  <meta name="robots" content="index, follow" />
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="StarkMind - Automatización Inteligente y Análisis de Datos para Empresas Modernas" />
+  <meta property="og:description" content="Firma tecnológica especializada en automatización inteligente, scraping web de alto rendimiento y extracción de datos impulsada por IA." />
+  <meta property="og:image" content="https://starkmind.xyz/img/starkmind-preview.png" />
+  <meta property="og:url" content="https://starkmind.xyz" />
+  <meta property="og:site_name" content="StarkMind" />
+  
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="StarkMind - Automatización Inteligente y Análisis de Datos para Empresas Modernas" />
+  <meta name="twitter:description" content="Firma tecnológica especializada en automatización inteligente, scraping web de alto rendimiento y extracción de datos impulsada por IA." />
+  <meta name="twitter:image" content="https://starkmind.xyz/img/starkmind-preview.png" />
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://starkmind.xyz" />
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  
+  <!-- Google Fonts - Updated for 2025 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            'sans': ['Inter', 'system-ui', 'sans-serif'],
+            'mono': ['JetBrains Mono', 'monospace'],
+          },
+          colors: {
+            'primary': {
+              50: '#f0f9ff', 100: '#e0f2fe', 200: '#bae6fd', 300: '#7dd3fc',
+              400: '#38bdf8', 500: '#0ea5e9', 600: '#0284c7', 700: '#0369a1',
+              800: '#075985', 900: '#0c4a6e', 950: '#082f49',
+            },
+            'neutral': {
+              50: '#fafafa', 100: '#f5f5f5', 200: '#e5e5e5', 300: '#d4d4d4',
+              400: '#a3a3a3', 500: '#737373', 600: '#525252', 700: '#404040',
+              800: '#262626', 900: '#171717', 950: '#0a0a0a',
+            }
+          },
+          spacing: {
+            '18': '4.5rem',
+            '88': '22rem',
+            '100': '25rem',
+            '112': '28rem',
+            '128': '32rem',
+          },
+          animation: {
+            'fade-in': 'fadeIn 0.8s ease-out forwards',
+            'slide-up': 'slideUp 0.6s ease-out forwards',
+            'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            'bounce-subtle': 'bounceSubtle 2s ease-in-out infinite',
+          },
+          keyframes: {
+            fadeIn: {
+              '0%': { opacity: '0', transform: 'translateY(30px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' }
+            },
+            slideUp: {
+              '0%': { opacity: '0', transform: 'translateY(50px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' }
+            },
+            bounceSubtle: {
+              '0%, 100%': { transform: 'translateY(0)' },
+              '50%': { transform: 'translateY(-10px)' }
+            }
+          },
+          backdropBlur: {
+            'xs': '2px',
+          }
+        }
+      }
+    }
+  </script>
+  <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+  
+  <style>
+    * { 
+      font-family: 'Inter', sans-serif; 
+      font-feature-settings: "cv11", "ss01";
+      font-variation-settings: "slnt" 0;
+    }
+    
+    .glass-morphism {
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    }
+    
+    .glass-card {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    }
+    
+    .btn-primary {
+      @apply inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-white bg-gradient-to-r from-primary-600 to-primary-700 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 active:scale-95;
+    }
+    
+    .btn-secondary {
+      @apply inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-neutral-700 bg-white/90 border border-neutral-200 rounded-2xl shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105 active:scale-95;
+    }
+    
+    .card-modern {
+      @apply bg-white/80 backdrop-blur-sm rounded-3xl p-8 border border-neutral-200/50 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1;
+    }
+    
+    .icon-modern {
+      @apply w-14 h-14 rounded-2xl flex items-center justify-center shadow-lg;
+    }
+    
+    .gradient-text {
+      @apply bg-gradient-to-r from-primary-600 to-primary-800 bg-clip-text text-transparent;
+    }
+    
+    html { 
+      scroll-behavior: smooth; 
+      font-synthesis: none;
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    
+    .animate-fade-in {
+      animation: fadeIn 0.8s ease-out forwards;
+    }
+    
+    /* Modern scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    
+    ::-webkit-scrollbar-track {
+      background: #f1f5f9;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+      background: #cbd5e1;
+      border-radius: 4px;
+    }
+    
+    ::-webkit-scrollbar-thumb:hover {
+      background: #94a3b8;
+    }
+  </style>
+  
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "StarkMind",
+    "description": "Firma tecnológica especializada en automatización inteligente, scraping web de alto rendimiento y extracción de datos impulsada por IA",
+    "url": "https://starkmind.xyz",
+    "logo": "https://starkmind.xyz/img/logo.png",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer service",
+      "availableLanguage": "Spanish"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Ciudad de Panamá",
+      "addressCountry": "Panamá"
+    },
+    "founder": {
+      "@type": "Person",
+      "name": "Noel Santamaría",
+      "jobTitle": "Fundador y Desarrollador Principal"
+    }
+  }
+  </script>
+</head>
+<body class="bg-gradient-to-br from-neutral-50 via-white to-neutral-100 text-neutral-800 font-normal antialiased">
+  <!-- Header -->
+  <header class="glass-morphism text-neutral-800 sticky top-0 z-50 border-b border-white/20">
+    <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+      <a href="#" class="flex items-center space-x-3 hover:opacity-80 transition-all duration-300 group" aria-label="Ir al inicio">
+        <div class="relative">
+          <svg width="42" height="42" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="StarkMind Logo" class="transition-transform duration-300 group-hover:scale-110">
+            <circle cx="50" cy="50" r="45" stroke="url(#gradient)" stroke-width="4" fill="#0f172a"/>
+            <polygon points="50,30 70,50 50,70 30,50" fill="url(#gradient)"/>
+            <defs>
+              <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#0ea5e9;stop-opacity:1" />
+                <stop offset="100%" style="stop-color:#0284c7;stop-opacity:1" />
+              </linearGradient>
+            </defs>
+          </svg>
+          <div class="absolute -inset-1 bg-gradient-to-r from-primary-600 to-primary-700 rounded-full opacity-0 group-hover:opacity-20 transition-opacity duration-300 blur"></div>
+        </div>
+        <div class="text-2xl font-bold tracking-tight bg-gradient-to-r from-neutral-900 to-neutral-700 bg-clip-text text-transparent">StarkMind</div>
+      </a>
+      
+      <div class="flex items-center space-x-8">
+        <!-- Language Toggle -->
+        <div class="flex items-center space-x-3">
+          <span :class="currentLang === 'es' ? 'text-neutral-900 font-semibold' : 'text-neutral-500'" class="text-sm font-medium">ES</span>
+          <button @click="toggleLanguage()" 
+                  class="relative inline-flex h-7 w-12 items-center rounded-full transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 shadow-md"
+                  :class="currentLang === 'en' ? 'bg-gradient-to-r from-primary-600 to-primary-700' : 'bg-neutral-300'">
+            <span class="inline-block h-5 w-5 transform rounded-full bg-white shadow-lg transition-transform duration-300"
+                  :class="currentLang === 'en' ? 'translate-x-6' : 'translate-x-1'"></span>
+          </button>
+          <span :class="currentLang === 'en' ? 'text-neutral-900 font-semibold' : 'text-neutral-500'" class="text-sm font-medium">EN</span>
+        </div>
+        
+        <nav aria-label="Navegación principal" class="hidden md:flex space-x-8 text-sm font-medium">
+          <a href="#servicios" class="text-neutral-600 hover:text-neutral-900 transition-colors duration-200 relative group" x-text="content[currentLang].navServices">
+            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary-600 to-primary-700 transition-all duration-200 group-hover:w-full"></span>
+          </a>
+          <a href="#tecnologia" class="text-neutral-600 hover:text-neutral-900 transition-colors duration-200 relative group" x-text="content[currentLang].navTechnology">
+            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary-600 to-primary-700 transition-all duration-200 group-hover:w-full"></span>
+          </a>
+          <a href="#empresa" class="text-neutral-600 hover:text-neutral-900 transition-colors duration-200 relative group" x-text="content[currentLang].navCompany">
+            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary-600 to-primary-700 transition-all duration-200 group-hover:w-full"></span>
+          </a>
+          <a href="#contacto" class="btn-primary" x-text="content[currentLang].navContact"></a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative min-h-screen flex items-center px-6 bg-gradient-to-br from-neutral-900 via-neutral-800 to-neutral-900 text-white overflow-hidden">
+    <!-- Enhanced Background Pattern -->
+    <div class="absolute inset-0">
+      <div class="absolute inset-0 bg-gradient-to-br from-primary-900/20 via-transparent to-primary-800/20"></div>
+      <div class="absolute inset-0 opacity-30">
+        <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-primary-600/20 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-1/4 right-1/4 w-80 h-80 bg-primary-700/20 rounded-full blur-3xl"></div>
+      </div>
+      <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(circle at 2px 2px, rgba(255,255,255,0.3) 1px, transparent 0); background-size: 60px 60px;"></div>
+    </div>
+    
+    <div class="relative max-w-7xl mx-auto text-center">
+      <div class="mb-10 inline-flex items-center px-6 py-3 glass-morphism rounded-full border border-white/20 animate-bounce-subtle">
+        <svg width="24" height="24" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" class="mr-3">
+          <circle cx="50" cy="50" r="45" stroke="url(#heroGradient)" stroke-width="4" fill="#0f172a"/>
+          <polygon points="50,30 70,50 50,70 30,50" fill="url(#heroGradient)"/>
+          <defs>
+            <linearGradient id="heroGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#0ea5e9;stop-opacity:1" />
+              <stop offset="100%" style="stop-color:#0284c7;stop-opacity:1" />
+            </linearGradient>
+          </defs>
+        </svg>
+        <span class="text-sm font-semibold" x-text="content[currentLang].tagline"></span>
+      </div>
+      
+      <h1 class="text-6xl md:text-8xl font-black mb-8 leading-none tracking-tight">
+        <span x-text="content[currentLang].heroTitle" class="block"></span>
+        <span class="block bg-gradient-to-r from-primary-400 to-primary-600 bg-clip-text text-transparent" x-text="content[currentLang].heroSubtitle"></span>
+      </h1>
+      
+      <p class="text-xl md:text-2xl text-neutral-300 max-w-4xl mx-auto mb-16 leading-relaxed font-light" x-html="content[currentLang].heroDescription"></p>
+      
+      <div class="flex flex-col sm:flex-row gap-6 justify-center items-center mb-20">
+        <a href="#contacto" class="btn-primary text-lg px-10 py-5 shadow-2xl" x-text="content[currentLang].ctaPrimary"></a>
+        <a href="#servicios" class="btn-secondary text-lg px-10 py-5 bg-white/10 border-white/30 text-white hover:bg-white/20" x-text="content[currentLang].ctaSecondary"></a>
+      </div>
+      
+      <!-- Enhanced Trust Indicators -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-5xl mx-auto">
+        <div class="text-center group">
+          <div class="text-5xl font-black bg-gradient-to-r from-primary-400 to-primary-600 bg-clip-text text-transparent mb-3 group-hover:scale-110 transition-transform duration-300">10+</div>
+          <div class="text-neutral-400 font-medium" x-text="currentLang === 'es' ? 'Años de Experiencia' : 'Years of Experience'"></div>
+        </div>
+        <div class="text-center group">
+          <div class="text-5xl font-black bg-gradient-to-r from-primary-400 to-primary-600 bg-clip-text text-transparent mb-3 group-hover:scale-110 transition-transform duration-300">100+</div>
+          <div class="text-neutral-400 font-medium" x-text="currentLang === 'es' ? 'Proyectos Completados' : 'Projects Completed'"></div>
+        </div>
+        <div class="text-center group">
+          <div class="text-5xl font-black bg-gradient-to-r from-primary-400 to-primary-600 bg-clip-text text-transparent mb-3 group-hover:scale-110 transition-transform duration-300">LATAM</div>
+          <div class="text-neutral-400 font-medium" x-text="currentLang === 'es' ? 'Alcance Regional' : 'Regional Reach'"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Servicios Empresariales -->
+  <section id="servicios" class="py-32 px-6 bg-gradient-to-b from-white to-neutral-50" aria-labelledby="servicios-title">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-24">
+        <div class="inline-block px-6 py-3 bg-gradient-to-r from-primary-50 to-primary-100 text-primary-700 text-sm font-bold rounded-2xl mb-6 shadow-md" x-text="currentLang === 'es' ? 'Nuestras Soluciones' : 'Our Solutions'"></div>
+        <h2 id="servicios-title" class="text-5xl md:text-7xl font-black text-neutral-900 mb-8 tracking-tight">
+          <span x-text="currentLang === 'es' ? 'Tecnología de' : 'Cutting-Edge'"></span> 
+          <span class="gradient-text" x-text="currentLang === 'es' ? 'Vanguardia' : 'Technology'"></span>
+        </h2>
+        <p class="text-xl text-neutral-600 max-w-4xl mx-auto leading-relaxed" x-text="currentLang === 'es' ? 'Descubre cómo automatizamos negocios como el tuyo con soluciones especializadas en Python, Django y FastAPI.' : 'Discover how we automate businesses like yours with specialized solutions in Python, Django and FastAPI.'"></p>
+      </div>
+      
+      <div class="grid md:grid-cols-3 gap-10">
+        <!-- APIs de Alto Rendimiento -->
+        <article class="group card-modern hover:border-primary-200 relative overflow-hidden">
+          <div class="absolute inset-0 bg-gradient-to-br from-primary-50/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-3xl"></div>
+          <div class="relative z-10">
+            <div class="icon-modern bg-gradient-to-br from-primary-100 to-primary-200 group-hover:from-primary-200 group-hover:to-primary-300 transition-all mb-8">
+              <svg class="w-8 h-8 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/>
+            </svg>
+            </div>
+            <h3 class="text-2xl font-bold text-neutral-900 mb-6" x-text="currentLang === 'es' ? 'APIs de Alto Rendimiento' : 'High-Performance APIs'"></h3>
+            <p class="text-neutral-600 mb-8 leading-relaxed text-lg" x-text="currentLang === 'es' ? 'APIs robustas y escalables con Django y FastAPI. Nuestros sistemas manejan millones de solicitudes y se integran perfectamente a tu arquitectura actual. Incluye documentación técnica completa y optimización para alta concurrencia.' : 'Robust and scalable APIs with Django and FastAPI. Our systems handle millions of requests and integrate seamlessly into your existing architecture. Includes complete technical documentation and high concurrency optimization.'"></p>
+            <div class="flex flex-wrap gap-3">
+              <span class="px-4 py-2 bg-neutral-100 text-neutral-700 text-sm font-medium rounded-xl">Python</span>
+              <span class="px-4 py-2 bg-neutral-100 text-neutral-700 text-sm font-medium rounded-xl">Django</span>
+              <span class="px-4 py-2 bg-neutral-100 text-neutral-700 text-sm font-medium rounded-xl">FastAPI</span>
+              <span class="px-4 py-2 bg-neutral-100 text-neutral-700 text-sm font-medium rounded-xl" x-text="currentLang === 'es' ? 'Escalabilidad' : 'Scalability'"></span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Inteligencia Artificial Aplicada -->
+        <article class="group card-modern hover:border-emerald-200 relative overflow-hidden">
+          <div class="absolute inset-0 bg-gradient-to-br from-emerald-50/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-3xl"></div>
+          <div class="relative z-10">
+            <div class="icon-modern bg-gradient-to-br from-emerald-100 to-emerald-200 group-hover:from-emerald-200 group-hover:to-emerald-300 transition-all mb-8">
+              <svg class="w-8 h-8 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+            </svg>
+            </div>
+            <h3 class="text-2xl font-bold text-neutral-900 mb-6" x-text="currentLang === 'es' ? 'Inteligencia Artificial Aplicada' : 'Applied Artificial Intelligence'"></h3>
+            <p class="text-neutral-600 mb-8 leading-relaxed text-lg" x-text="currentLang === 'es' ? 'Modelos de Machine Learning diseñados para operaciones empresariales. Nos especializamos en procesamiento de lenguaje natural en español, extracción de entidades y automatización de decisiones para optimizar tu negocio.' : 'Machine Learning models designed for business operations. We specialize in Spanish natural language processing, entity extraction and decision automation to optimize your business.'"></p>
+            <div class="flex flex-wrap gap-3">
+              <span class="px-4 py-2 bg-neutral-100 text-neutral-700 text-sm font-medium rounded-xl">Machine Learning</span>
+              <span class="px-4 py-2 bg-neutral-100 text-neutral-700 text-sm font-medium rounded-xl" x-text="currentLang === 'es' ? 'NLP Español' : 'Spanish NLP'"></span>
+              <span class="px-4 py-2 bg-neutral-100 text-neutral-700 text-sm font-medium rounded-xl" x-text="currentLang === 'es' ? 'Extracción' : 'Extraction'"></span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Scraping Avanzado -->
+        <article class="group card-modern hover:border-purple-200 relative overflow-hidden">
+          <div class="absolute inset-0 bg-gradient-to-br from-purple-50/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-3xl"></div>
+          <div class="relative z-10">
+            <div class="icon-modern bg-gradient-to-br from-purple-100 to-purple-200 group-hover:from-purple-200 group-hover:to-purple-300 transition-all mb-8">
+              <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
+            </svg>
+            </div>
+            <h3 class="text-2xl font-bold text-neutral-900 mb-6" x-text="currentLang === 'es' ? 'Scraping Avanzado de Datos' : 'Advanced Web Scraping'"></h3>
+            <p class="text-neutral-600 mb-8 leading-relaxed text-lg" x-text="currentLang === 'es' ? 'Scrapers resistentes con tecnologías anti-bloqueo, proxies y orquestación con Airflow. Recogemos, limpiamos y normalizamos datos desde cualquier fuente para análisis estratégico y toma de decisiones.' : 'Resilient scrapers with anti-blocking technologies, proxies and orchestration with Airflow. We collect, clean and normalize data from any source for strategic analysis and decision making.'"></p>
+            <div class="flex flex-wrap gap-3">
+              <span class="px-4 py-2 bg-neutral-100 text-neutral-700 text-sm font-medium rounded-xl">Web Scraping</span>
+              <span class="px-4 py-2 bg-neutral-100 text-neutral-700 text-sm font-medium rounded-xl">Airflow</span>
+              <span class="px-4 py-2 bg-neutral-100 text-neutral-700 text-sm font-medium rounded-xl">Anti-blocking</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tecnología y Capacidades -->
+  <section id="tecnologia" class="py-32 px-6 bg-gradient-to-b from-neutral-50 to-white" aria-labelledby="tecnologia-title">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-24">
+        <div class="inline-block px-6 py-3 bg-gradient-to-r from-neutral-800 to-neutral-900 text-white text-sm font-bold rounded-2xl mb-6 shadow-lg" x-text="currentLang === 'es' ? 'Casos de Éxito' : 'Success Stories'"></div>
+        <h2 id="tecnologia-title" class="text-5xl md:text-7xl font-black text-neutral-900 mb-8 tracking-tight">
+          <span x-text="currentLang === 'es' ? 'Resultados' : 'Proven Results'"></span> 
+          <span class="gradient-text" x-text="currentLang === 'es' ? 'Comprobados' : 'Verified'"></span>
+        </h2>
+        <p class="text-xl text-neutral-600 max-w-4xl mx-auto leading-relaxed" x-text="currentLang === 'es' ? 'Conoce cómo hemos automatizado y optimizado procesos para empresas líderes en la región.' : 'Discover how we have automated and optimized processes for leading companies in the region.'"></p>
+      </div>
+      
+      <!-- Enhanced Testimonials -->
+      {#
+      <div class="grid md:grid-cols-2 gap-8 mb-20">
+        <div class="glass-card rounded-3xl p-10 relative overflow-hidden group">
+          <div class="absolute inset-0 bg-gradient-to-br from-primary-50/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          <div class="relative z-10">
+            <div class="flex items-start space-x-6">
+              <div class="w-20 h-20 bg-gradient-to-br from-blue-500 to-blue-600 rounded-3xl flex items-center justify-center text-white font-black text-2xl shadow-lg">
+                M
+              </div>
+              <div class="flex-1">
+                <blockquote class="text-neutral-700 text-xl mb-6 leading-relaxed font-medium">
+                  "StarkMind automatizó nuestro monitoreo de precios en tiempo real. Ahorro de cientos de horas de análisis."
+                </blockquote>
+                <cite class="text-neutral-600 font-bold text-lg">Microsoft LATAM</cite>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="glass-card rounded-3xl p-10 relative overflow-hidden group">
+          <div class="absolute inset-0 bg-gradient-to-br from-neutral-50/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          <div class="relative z-10">
+            <div class="flex items-start space-x-6">
+              <div class="w-20 h-20 bg-gradient-to-br from-gray-700 to-gray-800 rounded-3xl flex items-center justify-center text-white font-black text-2xl shadow-lg">
+                A
+              </div>
+              <div class="flex-1">
+                <blockquote class="text-neutral-700 text-xl mb-6 leading-relaxed font-medium">
+                  "Entregaron un dashboard de ventas con extracción por IA: preciso, elegante y puntual."
+                </blockquote>
+                <cite class="text-neutral-600 font-bold text-lg">Apple Resellers</cite>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      #}
+      
+      <!-- Navegador de Tecnologías -->
+      <div x-data="{ 
+        currentTech: 0,
+        technologies: [
+          {
+            id: 0,
+            title: 'Análisis de Mercado',
+            description: 'Monitoreo competitivo automatizado',
+            icon: '📊',
+            category: 'Business Intelligence',
+            color: 'bg-blue-600',
+            colorLight: 'bg-blue-50',
+            textColor: 'text-blue-600'
+          },
+          {
+            id: 1,
+            title: 'Dashboard Ejecutivo',
+            description: 'Métricas empresariales centralizadas',
+            icon: '📈',
+            category: 'Analytics',
+            color: 'bg-emerald-600',
+            colorLight: 'bg-emerald-50',
+            textColor: 'text-emerald-600'
+          },
+          {
+            id: 2,
+            title: 'Procesamiento IA',
+            description: 'Análisis inteligente de documentos',
+            icon: '🧠',
+            category: 'Artificial Intelligence',
+            color: 'bg-purple-600',
+            colorLight: 'bg-purple-50',
+            textColor: 'text-purple-600'
+          },
+          {
+            id: 3,
+            title: 'Automatización',
+            description: 'Gestión empresarial automatizada',
+            icon: '⚡',
+            category: 'Process Automation',
+            color: 'bg-orange-600',
+            colorLight: 'bg-orange-50',
+            textColor: 'text-orange-600'
+          }
+        ]
+      }" class="mb-12">
+        
+        <!-- Navegación por Tecnologías -->
+        <div class="bg-white rounded-3xl p-3 shadow-lg border border-slate-200 max-w-5xl mx-auto">
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+            <template x-for="(tech, index) in technologies" :key="tech.id">
+              <button @click="currentTech = index" 
+                      :class="currentTech === index ? 
+                        'bg-slate-900 text-white shadow-lg transform scale-105' : 
+                        'text-slate-700 hover:bg-slate-100'"
+                      class="relative p-6 rounded-2xl transition-all duration-300 text-center group">
+                
+                <div class="text-3xl mb-3 transition-transform group-hover:scale-110" 
+                     x-text="tech.icon"></div>
+                <h3 class="font-bold text-sm mb-2" x-text="tech.title"></h3>
+                <p class="text-xs opacity-75" x-text="tech.category"></p>
+                
+                <!-- Indicador activo -->
+                <div x-show="currentTech === index" 
+                     class="absolute -top-1 -right-1 w-4 h-4 bg-blue-500 rounded-full shadow-lg"></div>
+              </button>
+            </template>
+          </div>
+        </div>
+        
+        <!-- Container de Demostración -->
+        <div class="bg-white rounded-3xl shadow-xl overflow-hidden border border-slate-200">
+          
+          <!-- Header Profesional -->
+          <div class="px-8 py-6 bg-gradient-to-r from-slate-50 to-slate-100 border-b border-slate-200">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center space-x-4">
+                <div class="w-14 h-14 rounded-2xl flex items-center justify-center text-3xl shadow-lg"
+                     :class="technologies[currentTech].colorLight">
+                  <span x-text="technologies[currentTech].icon"></span>
+                </div>
+                <div>
+                  <h3 class="text-2xl font-bold text-slate-900" x-text="technologies[currentTech].title"></h3>
+                  <p class="text-slate-600" x_text="technologies[currentTech].description"></p>
+                </div>
+              </div>
+              <div class="px-4 py-2 rounded-full text-sm font-semibold shadow-sm"
+                   :class="[technologies[currentTech].colorLight, technologies[currentTech].textColor]">
+                <span x-text="technologies[currentTech].category"></span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Demostración 1: Análisis de Mercado -->
+          <div x-show="currentTech === 0" x-transition:enter="transition ease-out duration-300" 
+               x-transition:enter-start="opacity-0" 
+               x-transition:enter-end="opacity-100"
+               class="p-8 bg-gradient-to-br from-blue-50 to-indigo-50"
+               x-data="{ 
+                 marketData: [
+                   {empresa: 'Competidor A', precio: 1299.99, cambio: -2.5, tendencia: 'down'},
+                   {empresa: 'Competidor B', precio: 1399.99, cambio: +1.2, tendencia: 'up'},
+                   {empresa: 'Competidor C', precio: 1199.99, cambio: +0.8, tendencia: 'up'},
+                   {empresa: 'Su Empresa', precio: 1249.99, cambio: 0, tendencia: 'neutral'}
+                 ],
+                 isAnalyzing: false,
+                 lastUpdate: new Date().toLocaleTimeString(),
+                 executeAnalysis() {
+                   this.isAnalyzing = true;
+                   setTimeout(() => {
+                     this.marketData.forEach(item => {
+                       if(item.empresa !== 'Su Empresa') {
+                         item.precio += (Math.random() - 0.5) * 50;
+                         item.cambio = (Math.random() - 0.5) * 5;
+                         item.tendencia = item.cambio > 0 ? 'up' : item.cambio < 0 ? 'down' : 'neutral';
+                       }
+                     });
+                     this.lastUpdate = new Date().toLocaleTimeString();
+                     this.isAnalyzing = false;
+                   }, 2000);
+                 }
+               }">
+            
+            <div class="max-w-6xl mx-auto">
+              <div class="grid lg:grid-cols-3 gap-8">
+                
+                <!-- Panel de Control -->
+                <div class="lg:col-span-1 space-y-6">
+                  <div class="bg-white rounded-2xl p-6 shadow-lg border border-blue-100">
+                    <h4 class="text-lg font-bold text-slate-900 mb-4 flex items-center">
+                      <svg class="w-5 h-5 mr-2 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                      </svg>
+                      Control de Análisis
+                    </h4>
+                    
+                    <button @click="executeAnalysis()" :disabled="isAnalyzing"
+                            class="w-full bg-blue-600 text-white py-3 px-4 rounded-xl font-semibold hover:bg-blue-700 transition-colors disabled:opacity-50">
+                      <span x-show="!isAnalyzing">Ejecutar Análisis</span>
+                      <span x-show="isAnalyzing" class="flex items-center justify-center">
+                        <svg class="animate-spin w-4 h-4 mr-2" fill="none" viewBox="0 0 24 24">
+                          <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                          <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                        </svg>
+                        Analizando...
+                      </span>
+                    </button>
+                    
+                    <div class="mt-4 text-sm text-slate-600 text-center">
+                      Última actualización: <span class="font-semibold" x-text="lastUpdate"></span>
+                    </div>
+                  </div>
+                </div>
+                
+                <!-- Panel de Resultados -->
+                <div class="lg:col-span-2">
+                  <div class="bg-white rounded-2xl p-6 shadow-lg border border-blue-100">
+                    <h4 class="text-lg font-bold text-slate-900 mb-6" x-text="currentLang === 'es' ? 'Análisis Competitivo en Tiempo Real' : 'Real-Time Competitive Analysis'"></h4>
+                    <div class="space-y-4">
+                      <template x-for="(item, index) in marketData" :key="index">
+                        <div class="flex items-center justify-between p-4 rounded-xl border-2"
+                             :class="item.empresa === 'Su Empresa' ? 'border-blue-200 bg-blue-50' : 'border-slate-200 bg-slate-50'">
+                          <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 rounded-xl bg-slate-200 flex items-center justify-center">
+                              <span class="text-lg">🏢</span>
+                            </div>
+                            <div>
+                              <div class="font-semibold text-slate-900" x-text="item.empresa"></div>
+                              <div class="text-sm text-slate-600" x-text="currentLang === 'es' ? 'Precio de referencia' : 'Reference Price'"></div>
+                            </div>
+                          </div>
+                          <div class="text-right">
+                            <div class="text-xl font-bold text-slate-900" x-text="'$' + item.precio.toFixed(2)"></div>
+                            <div class="flex items-center text-sm"
+                                 :class="item.tendencia === 'up' ? 'text-emerald-600' : item.tendencia === 'down' ? 'text-red-600' : 'text-slate-600'">
+                              <span x-show="item.tendencia === 'up'">↗️ +</span>
+                              <span x-show="item.tendencia === 'down'">↘️ </span>
+                              <span x-show="item.tendencia === 'neutral'">➡️ </span>
+                              <span x-text="Math.abs(item.cambio).toFixed(1) + '%'"></span>
+                            </div>
+                          </div>
+                        </div>
+                      </template>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Demostración 2: Dashboard Ejecutivo -->
+          <div x-show="currentTech === 1" x-transition:enter="transition ease-out duration-300" 
+               x-transition:enter-start="opacity-0" 
+               x-transition:enter-end="opacity-100"
+               class="p-8 bg-gradient-to-br from-emerald-50 to-teal-50"
+               x-data="{
+                 kpis: {
+                   revenue: 2840000,
+                   growth: 23.5,
+                   customers: 1247,
+                   efficiency: 94.2
+                 },
+                 isRefreshing: false,
+                 refreshData() {
+                   this.isRefreshing = true;
+                   setTimeout(() => {
+                     this.kpis.revenue += Math.floor(Math.random() * 100000) - 50000;
+                     this.kpis.growth += (Math.random() - 0.5) * 2;
+                     this.kpis.customers += Math.floor(Math.random() * 20) - 10;
+                     this.kpis.efficiency += (Math.random() - 0.5) * 1;
+                     this.isRefreshing = false;
+                   }, 1500);
+                 }
+               }">
+            
+            <div class="max-w-6xl mx-auto">
+              <div class="grid lg:grid-cols-4 gap-6 mb-8">
+                
+                <!-- KPI Cards -->
+                <div class="bg-white rounded-2xl p-6 shadow-lg border border-emerald-100">
+                  <div class="flex items-center justify-between mb-4">
+                    <div class="w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center">
+                      <svg class="w-6 h-6 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"></path>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="text-2xl font-bold text-slate-900" x-text="'$' + (kpis.revenue / 1000000).toFixed(1) + 'M'"></div>
+                  <div class="text-sm text-slate-600" x-text="currentLang === 'es' ? 'Ingresos Totales' : 'Total Revenue'"></div>
+                  <div class="text-xs text-emerald-600 font-semibold mt-2" x-text="currentLang === 'es' ? '+12.3% vs mes anterior' : '+12.3% vs previous month'"></div>
+                </div>
+
+                <div class="bg-white rounded-2xl p-6 shadow-lg border border-blue-100">
+                  <div class="flex items-center justify-between mb-4">
+                    <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center">
+                      <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="text-2xl font-bold text-slate-900" x-text="kpis.growth.toFixed(1) + '%'"></div>
+                  <div class="text-sm text-slate-600" x-text="currentLang === 'es' ? 'Crecimiento' : 'Growth'"></div>
+                  <div class="text-xs text-blue-600 font-semibold mt-2" x-text="currentLang === 'es' ? 'Objetivo: 25%' : 'Target: 25%'"></div>
+                </div>
+
+                <div class="bg-white rounded-2xl p-6 shadow-lg border border-purple-100">
+                  <div class="flex items-center justify-between mb-4">
+                    <div class="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center">
+                      <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="text-2xl font-bold text-slate-900" x-text="kpis.customers.toLocaleString()"></div>
+                  <div class="text-sm text-slate-600" x-text="currentLang === 'es' ? 'Clientes Activos' : 'Active Customers'"></div>
+                  <div class="text-xs text-purple-600 font-semibold mt-2" x-text="currentLang === 'es' ? '+8.7% este mes' : '+8.7% this month'"></div>
+                </div>
+
+                <div class="bg-white rounded-2xl p-6 shadow-lg border border-orange-100">
+                  <div class="flex items-center justify-between mb-4">
+                    <div class="w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center">
+                      <svg class="w-6 h-6 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="text-2xl font-bold text-slate-900" x-text="kpis.efficiency.toFixed(1) + '%'"></div>
+                  <div class="text-sm text-slate-600" x_text="currentLang === 'es' ? 'Eficiencia Operacional' : 'Operational Efficiency'"></div>
+                  <div class="text-xs text-orange-600 font-semibold mt-2" x-text="currentLang === 'es' ? 'Meta: 95%' : 'Goal: 95%'"></div>
+                </div>
+              </div>
+
+              <!-- Control Panel -->
+              <div class="flex justify-center">
+                <button @click="refreshData()" :disabled="isRefreshing"
+                        class="bg-emerald-600 text-white px-8 py-3 rounded-xl font-semibold hover:bg-emerald-700 transition-colors disabled:opacity-50 flex items-center">
+                  <span x-show="!isRefreshing">Actualizar Métricas</span>
+                  <span x-show="isRefreshing" class="flex items-center">
+                    <svg class="animate-spin w-4 h-4 mr-2" fill="none" viewBox="0 0 24 24">
+                      <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                      <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                    </svg>
+                    Actualizando...
+                  </span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Placeholders para las otras dos demostraciones -->
+          <div x-show="currentTech === 2" x-transition:enter="transition ease-out duration-300" 
+               x-transition:enter-start="opacity-0" 
+               x-transition:enter-end="opacity-100"
+               class="p-8 bg-gradient-to-br from-purple-50 to-indigo-50">
+            <div class="max-w-4xl mx-auto text-center">
+              <div class="text-6xl mb-6">🧠</div>
+              <h4 class="text-2xl font-bold text-slate-900 mb-4">Procesamiento de IA Avanzado</h4>
+              <p class="text-slate-600 text-lg">
+                Análisis inteligente de documentos empresariales utilizando modelos de procesamiento de lenguaje natural 
+                que extraen información crítica y generan insights estratégicos automatizados.
+              </p>
+            </div>
+          </div>
+
+          <div x-show="currentTech === 3" x-transition:enter="transition ease-out duration-300" 
+               x-transition:enter-start="opacity-0" 
+               x-transition:enter-end="opacity-100"
+               class="p-8 bg-gradient-to-br from-orange-50 to-red-50">
+            <div class="max-w-4xl mx-auto text-center">
+              <div class="text-6xl mb-6">⚡</div>
+              <h4 class="text-2xl font-bold text-slate-900 mb-4">Automatización Empresarial</h4>
+              <p class="text-slate-600 text-lg">
+                Sistemas de automatización que gestionan procesos empresariales complejos, 
+                desde la gestión de clientes hasta la optimización de operaciones internas y reportería ejecutiva.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  <!-- Empresa y Fundador -->
+  <section id="empresa" class="py-32 px-6 bg-gradient-to-b from-white to-neutral-50" aria-labelledby="empresa-title">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-20">
+        <div class="inline-block px-6 py-3 bg-gradient-to-r from-neutral-100 to-neutral-200 text-neutral-800 text-sm font-bold rounded-2xl mb-6 shadow-md" x-text="currentLang === 'es' ? 'Nuestra Empresa' : 'Our Company'"></div>
+        <h2 id="empresa-title" class="text-5xl md:text-7xl font-black text-neutral-900 mb-8 tracking-tight">
+          <span x-text="currentLang === 'es' ? 'Especialistas desde' : 'Specialists from'"></span> 
+          <span class="gradient-text">Panamá</span>
+        </h2>
+        <p class="text-xl text-neutral-600 max-w-4xl mx-auto leading-relaxed" x_text="currentLang === 'es' ? 'Con base en Ciudad de Panamá, atendemos empresas en toda América Latina con soluciones tecnológicas de clase mundial.' : 'Based in Panama City, we serve companies throughout Latin America with world-class technology solutions.'"></p>
+      </div>
+      
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <!-- Información del Fundador -->
+        <div class="order-2 lg:order-1">
+          <div class="glass-card rounded-3xl p-10 relative overflow-hidden group">
+            <div class="absolute inset-0 bg-gradient-to-br from-primary-50/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <div class="relative z-10">
+              <div class="flex items-center space-x-8 mb-8">
+                <div class="w-24 h-24 bg-gradient-to-br from-primary-500 to-primary-600 rounded-3xl flex items-center justify-center text-white font-black text-3xl shadow-lg">
+                  NS
+                </div>
+                <div>
+                  <h3 class="text-3xl font-black text-neutral-900">Noel Santamaría</h3>
+                  <p class="text-primary-600 font-bold text-lg" x-text="currentLang === 'es' ? 'Fundador y Desarrollador Principal' : 'Founder & Lead Developer'"></p>
+                </div>
+              </div>
+              <p class="text-neutral-700 leading-relaxed mb-8 text-lg" x-text="currentLang === 'es' ? 'Desarrollador Python con experiencia en construir sistemas inteligentes, APIs escalables y pipelines de datos para empresas en Panamá y América Latina.' : 'Python developer with experience building intelligent systems, scalable APIs and data pipelines for companies in Panama and Latin America.'"></p>
+              <div class="flex flex-wrap gap-4">
+                <span class="px-5 py-3 bg-white text-neutral-700 text-sm font-bold rounded-2xl border border-neutral-200 shadow-sm">Python Expert</span>
+                <span class="px-5 py-3 bg-white text-neutral-700 text-sm font-bold rounded-2xl border border-neutral-200 shadow-sm">AI/ML</span>
+                <span class="px-5 py-3 bg-white text-neutral-700 text-sm font-bold rounded-2xl border border-neutral-200 shadow-sm">Data Engineering</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Información de la Empresa -->
+        <div class="order-1 lg:order-2">
+          <div class="space-y-10">
+            <div class="flex items-start space-x-6">
+              <div class="icon-modern bg-gradient-to-br from-primary-100 to-primary-200 flex-shrink-0">
+                <svg class="w-8 h-8 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                </svg>
+              </div>
+              <div>
+                <h4 class="text-2xl font-bold text-neutral-900 mb-4" x-text="currentLang === 'es' ? 'Ubicación Estratégica' : 'Strategic Location'"></h4>
+                <p class="text-neutral-600 text-lg leading-relaxed" x-text="currentLang === 'es' ? 'Desde Ciudad de Panamá, centro logístico de América, conectamos con empresas de toda la región para entregar soluciones tecnológicas de vanguardia.' : 'From Panama City, the logistics center of the Americas, we connect with companies throughout the region to deliver cutting-edge technology solutions.'"></p>
+              </div>
+            </div>
+            
+            <div class="flex items-start space-x-6">
+              <div class="icon-modern bg-gradient-to-br from-emerald-100 to-emerald-200 flex-shrink-0">
+                <svg class="w-8 h-8 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                </svg>
+              </div>
+              <div>
+                <h4 class="text-2xl font-bold text-neutral-900 mb-4" x-text="currentLang === 'es' ? 'Soporte Multiidioma' : 'Multilingual Support'"></h4>
+                <p class="text-neutral-600 text-lg leading-relaxed" x_text="currentLang === 'es' ? 'Atendemos en español e inglés, facilitando la comunicación con equipos locales e internacionales en toda América Latina.' : 'We provide support in Spanish and English, facilitating communication with local and international teams throughout Latin America.'"></p>
+              </div>
+            </div>
+            
+            <div class="flex items-start space-x-6">
+              <div class="icon-modern bg-gradient-to-br from-purple-100 to-purple-200 flex-shrink-0">
+                <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                </svg>
+              </div>
+              <div>
+                <h4 class="text-2xl font-bold text-neutral-900 mb-4" x-text="currentLang === 'es' ? 'Enfoque Especializado' : 'Specialized Focus'"></h4>
+                <p class="text-neutral-600 text-lg leading-relaxed" x_text="currentLang === 'es' ? 'Nos enfocamos exclusivamente en automatización inteligente y análisis de datos, garantizando expertise profundo en cada proyecto.' : 'We focus exclusively on intelligent automation and data analysis, ensuring deep expertise in every project.'"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contacto -->
+  <section id="contacto" class="py-32 px-6 bg-gradient-to-br from-neutral-900 via-neutral-800 to-neutral-900 text-white relative overflow-hidden" aria-labelledby="contacto-title">
+    <!-- Enhanced Background -->
+    <div class="absolute inset-0">
+      <div class="absolute inset-0 bg-gradient-to-br from-primary-900/30 via-transparent to-primary-800/30"></div>
+      <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-primary-600/20 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-1/4 right-1/4 w-80 h-80 bg-primary-700/20 rounded-full blur-3xl"></div>
+    </div>
+    
+    <div class="relative max-w-6xl mx-auto">
+      <div class="text-center mb-16">
+        <div class="inline-block px-6 py-3 glass-morphism text-white text-sm font-bold rounded-2xl mb-6" x-text="currentLang === 'es' ? 'Construyamos Juntos' : 'Let\'s Build Together'"></div>
+        <h2 id="contacto-title" class="text-5xl md:text-7xl font-black mb-8 tracking-tight">
+          <span x_text="currentLang === 'es' ? 'Tu Próxima Ventaja' : 'Your Next'"></span> 
+          <span class="bg-gradient-to-r from-primary-400 to-primary-600 bg-clip-text text-transparent" x_text="currentLang === 'es' ? 'Competitiva' : 'Competitive Advantage'"></span>
+        </h2>
+        <p class="text-xl text-neutral-300 mb-12 leading-relaxed" x_text="currentLang === 'es' ? 'Construyamos juntos tu próxima ventaja competitiva con automatización inteligente y análisis de datos.' : 'Let\'s build your next competitive advantage together with intelligent automation and data analysis.'"></p>
+      </div>
+      
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <!-- Imagen profesional -->
+        <div class="order-2 lg:order-1">
+          <div class="relative mb-12">
+            <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80" 
+                 alt="Equipo de desarrollo trabajando en automatización" 
+                 class="rounded-3xl shadow-2xl w-full h-[500px] object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent rounded-3xl"></div>
+          </div>
+          
+          <!-- Información de contacto mejorada -->
+          <div class="space-y-8">
+            <div class="flex items-center space-x-6 group">
+              <div class="icon-modern bg-gradient-to-br from-primary-600 to-primary-700 group-hover:scale-110 transition-transform duration-300">
+                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                </svg>
+              </div>
+              <div>
+                <h4 class="font-bold text-white text-lg">Email</h4>
+                <a href="mailto:noelsantamaria@agendify.xyz" class="text-primary-400 hover:text-primary-300 transition-colors text-lg">noelsantamaria@agendify.xyz</a>
+              </div>
+            </div>
+            
+            <div class="flex items-center space-x-6 group">
+              <div class="icon-modern bg-gradient-to-br from-emerald-600 to-emerald-700 group-hover:scale-110 transition-transform duration-300">
+                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                </svg>
+              </div>
+              <div>
+                <h4 class="font-bold text-white text-lg" x-text="currentLang === 'es' ? 'Teléfono' : 'Phone'"></h4>
+                <a href="tel:+50769851234" class="text-emerald-400 hover:text-emerald-300 transition-colors text-lg">+507 6574-6831</a>
+              </div>
+            </div>
+            
+            <div class="flex items-center space-x-6 group">
+              <div class="icon-modern bg-gradient-to-br from-purple-600 to-purple-700 group-hover:scale-110 transition-transform duration-300">
+                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                </svg>
+              </div>
+              <div>
+                <h4 class="font-bold text-white text-lg" x-text="currentLang === 'es' ? 'Ubicación' : 'Location'"></h4>
+                <p class="text-purple-400 text-lg" x_text="currentLang === 'es' ? 'Ciudad de Panamá, Panamá' : 'Panama City, Panama'"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Formulario de Contacto mejorado -->
+        <div class="order-1 lg:order-2">
+          <div class="glass-morphism rounded-3xl p-10 border border-white/10">
+            <form class="space-y-8" method="POST" action="/">
+              <div>
+                <label for="nombre" class="block text-sm font-bold text-white mb-3" x-text="currentLang === 'es' ? 'Nombre' : 'Name'"></label>
+                <input type="text" id="nombre" name="nombre" required
+                       class="w-full px-6 py-4 bg-white/10 border border-white/20 rounded-2xl text-white placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-300">
+              </div>
+              
+              <div>
+                <label for="email" class="block text-sm font-bold text-white mb-3">Email</label>
+                <input type="email" id="email" name="email" required
+                       class="w-full px-6 py-4 bg-white/10 border border-white/20 rounded-2xl text-white placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-300">
+              </div>
+              
+              <div>
+                <label for="empresa" class="block text-sm font-bold text-white mb-3" x-text="currentLang === 'es' ? 'Empresa' : 'Company'"></label>
+                <input type="text" id="empresa" name="empresa"
+                       class="w-full px-6 py-4 bg-white/10 border border-white/20 rounded-2xl text-white placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-300">
+              </div>
+              
+              <div>
+                <label for="celular" class="block text-sm font-bold text-white mb-3" x-text="currentLang === 'es' ? 'Celular' : 'Mobile'"></label>
+                <input type="tel" id="celular" name="celular"
+                       class="w-full px-6 py-4 bg-white/10 border border-white/20 rounded-2xl text-white placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-300"
+                       :placeholder="currentLang === 'es' ? '+507 6000-0000' : '+507 6000-0000'">
+              </div>
+              
+              <div>
+                <label for="mensaje" class="block text-sm font-bold text-white mb-3" x-text="currentLang === 'es' ? 'Mensaje' : 'Message'"></label>
+                <textarea id="mensaje" name="mensaje" rows="5" required
+                          class="w-full px-6 py-4 bg-white/10 border border-white/20 rounded-2xl text-white placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent resize-none transition-all duration-300"></textarea>
+              </div>
+              
+              <button type="submit" class="w-full btn-primary text-lg py-5 shadow-2xl" x-text="currentLang === 'es' ? 'Enviar Mensaje' : 'Send Message'"></button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Scripts -->
+  <script>
+    // Smooth scrolling para navegación
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+
+    // Animación de entrada para elementos cuando entran en viewport
+    const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate-fade-in');
+        }
+      });
+    }, observerOptions);
+
+    // Observar elementos que deben animarse
+    document.querySelectorAll('section').forEach(section => {
+      observer.observe(section);
+    });
+  </script>
+</body>
+</html>
