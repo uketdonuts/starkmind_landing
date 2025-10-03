@@ -10,6 +10,7 @@ import DemoSection from './components/DemoSection';
 import TechnologySection from './components/TechnologySection';
 import CompanySection from './components/CompanySection';
 import ContactSection from './components/ContactSection';
+import WhatsAppButton from './components/WhatsAppButton';
 import './App.css';
 
 const App: React.FC = () => {
@@ -28,6 +29,7 @@ const App: React.FC = () => {
           <CompanySection />
           <ContactSection />
         </main>
+        <WhatsAppButton />
       </div>
     </LanguageProvider>
   );

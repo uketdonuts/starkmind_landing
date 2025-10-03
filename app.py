@@ -1,4 +1,5 @@
 from flask import Flask, request, jsonify, send_from_directory
+from typing import List
 from flask_cors import CORS
 import os
 import logging
@@ -24,7 +25,7 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 # Helper para enviar correos usando Brevo Python SDK
-def send_mail(sender: str, recipients: list[str], subject: str, html: str, text: str) -> dict:
+def send_mail(sender: str, recipients: List[str], subject: str, html: str, text: str) -> dict:
     """
     Enviar email usando la API de Brevo con el SDK de Python
     """
