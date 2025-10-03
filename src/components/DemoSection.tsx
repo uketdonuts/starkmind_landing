@@ -656,7 +656,7 @@ const DemoSection: React.FC = () => {
               <button
                 key={demo.id}
                 onClick={() => setActiveDemo(index)}
-                className={`relative p-6 rounded-2xl transition-all duration-300 text-center group ${
+                className={`relative p-6 rounded-2xl transition-all duration-150 text-center group ${
                   activeDemo === index
                     ? 'bg-slate-900 text-white shadow-lg transform scale-105'
                     : 'text-slate-700 hover:bg-slate-100'
@@ -720,7 +720,14 @@ const DemoSection: React.FC = () => {
           </p>
           <a
             href="#contacto"
-            className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-primary-600 to-primary-700 text-white font-semibold rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+            onClick={(e) => {
+              e.preventDefault();
+              const contactSection = document.getElementById('contacto');
+              if (contactSection) {
+                contactSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+              }
+            }}
+            className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-primary-600 to-primary-700 text-white font-semibold rounded-2xl shadow-lg hover:shadow-xl transition-all duration-200 cursor-pointer"
           >
             {currentLang === 'es' ? 'Solicitar Consultoría' : 'Request Consultation'}
             <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">

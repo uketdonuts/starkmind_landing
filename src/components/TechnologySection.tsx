@@ -70,7 +70,7 @@ const TechnologySection: React.FC = () => {
       
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-24">
-          <div className="inline-block px-8 py-4 dynamic-island text-white text-sm font-bold mb-8 animate-bounce-subtle">
+          <div className="inline-block px-6 py-3 bg-gradient-to-r from-primary-100 to-primary-200 text-primary-800 text-sm font-bold rounded-2xl mb-6 shadow-md">
             {currentLang === 'es' ? '🚀 Nuestro Stack Tecnológico' : '🚀 Our Tech Stack'}
           </div>
           <h2 id="technology-title" className="text-6xl md:text-8xl font-black text-neutral-900 mb-12 tracking-tight animate-fade-in delay-150">

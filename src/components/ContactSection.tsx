@@ -130,7 +130,7 @@ const ContactSection: React.FC = () => {
       
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-20">
-          <div className="inline-block px-8 py-4 dynamic-island text-white text-sm font-bold mb-8 animate-bounce-subtle">
+          <div className="inline-block px-6 py-3 bg-gradient-to-r from-primary-100 to-primary-200 text-primary-800 text-sm font-bold rounded-2xl mb-6 shadow-md">
             {currentLang === 'es' ? '💬 Hablemos de tu Proyecto' : '💬 Let\'s Talk About Your Project'}
           </div>
           <h2 id="contacto-title" className="text-6xl md:text-8xl font-black text-neutral-900 mb-12 tracking-tight animate-fade-in delay-150">

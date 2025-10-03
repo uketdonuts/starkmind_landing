@@ -21,7 +21,9 @@ const contentData: LanguageContent = {
     navDemos: 'Demos',
     navTechnology: 'Tecnología',
     navCompany: 'Empresa',
-    navContact: 'Consultoría'
+    navContact: 'Consultoría',
+    navPortfolio: 'Portafolio',
+    navDevelopment: 'Desarrollo'
   },
   en: {
     title: 'StarkMind - Smart Automation & Data Intelligence for the Modern Business',
@@ -36,7 +38,9 @@ const contentData: LanguageContent = {
     navDemos: 'Demos',
     navTechnology: 'Technology',
     navCompany: 'Company',
-    navContact: 'Consultation'
+    navContact: 'Consultation',
+    navPortfolio: 'Portfolio',
+    navDevelopment: 'Development'
   }
 };
 

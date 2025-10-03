@@ -1,0 +1,16 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://starkmind.xyz/sitemap.xml
+
+# Optimized for SEO
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Disallow admin/sensitive paths (if any)
+Disallow: /api/
+Disallow: /logs/

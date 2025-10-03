@@ -51,7 +51,7 @@ const ServicesSection: React.FC = () => {
     <section id="servicios" className="py-32 px-6 bg-gradient-to-b from-primary-50/50 to-neutral-100" aria-labelledby="servicios-title">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-24">
-          <div className="inline-block px-6 py-3 bg-gradient-to-r from-primary-50 to-primary-100 text-primary-700 text-sm font-bold rounded-2xl mb-6 shadow-md animate-bounce-subtle">
+          <div className="inline-block px-6 py-3 bg-gradient-to-r from-primary-100 to-primary-200 text-primary-800 text-sm font-bold rounded-2xl mb-6 shadow-md">
             {currentLang === 'es' ? 'Nuestras Soluciones' : 'Our Solutions'}
           </div>
           <h2 id="servicios-title" className="text-5xl md:text-7xl font-black text-neutral-900 mb-8 tracking-tight animate-fade-in delay-150">

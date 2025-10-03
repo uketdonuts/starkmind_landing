@@ -12,6 +12,8 @@ export interface Content {
   navTechnology: string;
   navCompany: string;
   navContact: string;
+  navPortfolio: string;
+  navDevelopment: string;
 }
 
 export interface LanguageContent {

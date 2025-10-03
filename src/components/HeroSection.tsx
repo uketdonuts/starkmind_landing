@@ -6,7 +6,7 @@ const HeroSection: React.FC = () => {
   const { currentLang, content } = useLanguage();
 
   return (
-    <section className="relative min-h-screen flex items-center px-6 bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 text-white overflow-hidden">
+    <section id="hero" className="relative min-h-screen flex items-center px-6 bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 text-white overflow-hidden">
       {/* Professional Background Pattern */}
       <div className="absolute inset-0">
         {/* Subtle grid pattern */}
@@ -22,7 +22,7 @@ const HeroSection: React.FC = () => {
       
       <div className="relative max-w-7xl mx-auto text-center px-4 sm:px-6">
         {/* Professional Badge */}
-        <div className="mt-16 sm:mt-12 mb-12 inline-flex items-center px-3 sm:px-6 md:px-8 py-3 sm:py-4 bg-slate-800/40 backdrop-blur-sm rounded-lg border border-slate-700/50 group hover:border-slate-600/50 transition-all duration-300">
+        <div className="mt-16 sm:mt-12 mb-12 inline-flex items-center px-3 sm:px-6 md:px-8 py-3 sm:py-4 bg-slate-800/40 backdrop-blur-sm rounded-lg border border-slate-700/50 group hover:border-slate-600/50 transition-all duration-150">
           <div className="w-2 h-2 bg-emerald-400 rounded-full mr-3 sm:mr-4 animate-pulse"></div>
           <span className="text-xs sm:text-sm font-medium text-slate-300 tracking-wide uppercase">
             {content[currentLang].tagline}
@@ -44,20 +44,20 @@ const HeroSection: React.FC = () => {
         <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-24">
           <button 
             onClick={() => scrollToSection('contacto')}
-            className="bg-white text-slate-900 px-10 py-4 rounded-lg font-semibold text-lg hover:bg-slate-100 transition-all duration-200 shadow-lg hover:shadow-xl border border-slate-200"
+            className="bg-white text-slate-900 px-10 py-4 rounded-lg font-semibold text-lg hover:bg-slate-100 transition-all duration-150 shadow-lg hover:shadow-xl border border-slate-200"
           >
             {content[currentLang].ctaPrimary}
           </button>
           <button 
             onClick={() => scrollToSection('servicios')}
-            className="bg-transparent border-2 border-slate-600 text-slate-300 px-10 py-4 rounded-lg font-semibold text-lg hover:border-slate-500 hover:text-slate-200 transition-all duration-200"
+            className="bg-transparent border-2 border-slate-600 text-slate-300 px-10 py-4 rounded-lg font-semibold text-lg hover:border-slate-500 hover:text-slate-200 transition-all duration-150"
           >
             {content[currentLang].ctaSecondary}
           </button>
         </div>
         
         {/* Professional Metrics */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-16 max-w-4xl mx-auto pb-12 md:pb-0">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-16 max-w-4xl mx-auto pb-20 md:pb-24">
           <div className="text-center group">
             <div className="text-4xl font-bold text-slate-200 mb-2 group-hover:text-white transition-colors duration-300">
               8+
