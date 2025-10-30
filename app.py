@@ -263,6 +263,23 @@ def static_files(filename):
     # Si no se encuentra, retornar 404
     return "Static file not found", 404
 
+# Ruta para servir archivos de imágenes y videos
+@app.route('/img/<path:filename>')
+def serve_images(filename):
+    """Servir archivos de imágenes y videos desde el directorio static/img con soporte de rango"""
+    try:
+        file_path = os.path.join('static/img', filename)
+        if not os.path.exists(file_path):
+            return "Image file not found", 404
+            
+        # Para archivos de video, usar send_file con soporte de rango
+        if filename.lower().endswith(('.mp4', '.webm', '.ogg', '.avi', '.mov')):
+            return send_from_directory('static/img', filename, as_attachment=False, conditional=True)
+        else:
+            return send_from_directory('static/img', filename)
+    except FileNotFoundError:
+        return "Image file not found", 404
+
 # Catch-all route for React Router (SPA)
 @app.route('/<path:path>')
 def catch_all(path):
